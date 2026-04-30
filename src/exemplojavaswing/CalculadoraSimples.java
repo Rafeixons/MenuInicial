@@ -8,12 +8,12 @@ package exemplojavaswing;
  *
  * @author 886663
  */
-public class Form1 extends javax.swing.JFrame {
+public class CalculadoraSimples extends javax.swing.JFrame {
 
     /**
      * Creates new form Form1
      */
-    public Form1() {
+    public CalculadoraSimples() {
         initComponents();
     }
 
@@ -27,37 +27,36 @@ public class Form1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txf_numero1 = new javax.swing.JTextField();
         txf_numero2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         txf_resultado = new javax.swing.JTextField();
         jb_somar = new javax.swing.JButton();
         jb_subtrair = new javax.swing.JButton();
         jb_multiplicacao = new javax.swing.JButton();
         jb_divisao = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Calculadora");
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 0)));
         jPanel1.setToolTipText("");
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Calculadora");
-
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Numero 1:");
+        jLabel2.setText("1° Valor");
 
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Numero 2:");
+        jLabel3.setText("2° Valor:");
 
-        txf_numero1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 153, 255)));
+        txf_numero1.setBackground(new java.awt.Color(153, 153, 255));
+        txf_numero1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txf_numero1.setForeground(new java.awt.Color(0, 0, 0));
+        txf_numero1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txf_numero1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txf_numero1.setCaretColor(new java.awt.Color(102, 102, 255));
         txf_numero1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,45 +64,64 @@ public class Form1 extends javax.swing.JFrame {
             }
         });
 
-        txf_numero2.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 153, 255)));
-
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Resultado: ");
+        txf_numero2.setBackground(new java.awt.Color(153, 153, 255));
+        txf_numero2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txf_numero2.setForeground(new java.awt.Color(0, 0, 0));
+        txf_numero2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txf_numero2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         txf_resultado.setEditable(false);
-        txf_resultado.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 153, 255)));
+        txf_resultado.setBackground(new java.awt.Color(153, 153, 255));
+        txf_resultado.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        txf_resultado.setForeground(new java.awt.Color(0, 0, 0));
+        txf_resultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txf_resultado.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txf_resultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txf_resultadoActionPerformed(evt);
+            }
+        });
 
-        jb_somar.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jb_somar.setBackground(new java.awt.Color(153, 153, 255));
+        jb_somar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jb_somar.setForeground(new java.awt.Color(0, 0, 0));
         jb_somar.setText("+");
-        jb_somar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 153, 255)));
+        jb_somar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jb_somar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jb_somar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_somarActionPerformed(evt);
             }
         });
 
-        jb_subtrair.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jb_subtrair.setBackground(new java.awt.Color(153, 153, 255));
+        jb_subtrair.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jb_subtrair.setForeground(new java.awt.Color(0, 0, 0));
         jb_subtrair.setText("-");
-        jb_subtrair.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 153, 255)));
+        jb_subtrair.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jb_subtrair.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jb_subtrair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_subtrairActionPerformed(evt);
             }
         });
 
-        jb_multiplicacao.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jb_multiplicacao.setBackground(new java.awt.Color(153, 153, 255));
+        jb_multiplicacao.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jb_multiplicacao.setForeground(new java.awt.Color(0, 0, 0));
         jb_multiplicacao.setText("*");
-        jb_multiplicacao.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 153, 255)));
+        jb_multiplicacao.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jb_multiplicacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_multiplicacaoActionPerformed(evt);
             }
         });
 
-        jb_divisao.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jb_divisao.setBackground(new java.awt.Color(153, 153, 255));
+        jb_divisao.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jb_divisao.setForeground(new java.awt.Color(0, 0, 0));
         jb_divisao.setText("/");
-        jb_divisao.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 153, 255)));
+        jb_divisao.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jb_divisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_divisaoActionPerformed(evt);
@@ -117,81 +135,68 @@ public class Form1 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel2)
+                        .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(txf_numero1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(jb_somar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(jb_subtrair, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(jLabel4)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 37, Short.MAX_VALUE)
-                                .addComponent(jb_multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(49, 49, 49)
+                                .addGap(161, 161, 161)
                                 .addComponent(jb_divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txf_numero2, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                                    .addComponent(txf_resultado))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(42, 42, 42))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_somar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3))
+                                .addGap(33, 33, 33)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txf_numero2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jb_subtrair, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txf_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(39, 39, 39)
+                                .addComponent(txf_numero1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addContainerGap()
+                .addComponent(txf_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txf_numero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txf_numero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_somar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_subtrair, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txf_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txf_numero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txf_numero1ActionPerformed
@@ -253,6 +258,10 @@ public class Form1 extends javax.swing.JFrame {
             txf_resultado.setText(String.valueOf(total));
     }//GEN-LAST:event_jb_divisaoActionPerformed
 
+    private void txf_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txf_resultadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txf_resultadoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -270,29 +279,28 @@ public class Form1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Form1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculadoraSimples.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Form1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculadoraSimples.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Form1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculadoraSimples.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Form1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculadoraSimples.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Form1().setVisible(true);
+                new CalculadoraSimples().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jb_divisao;
     private javax.swing.JButton jb_multiplicacao;
