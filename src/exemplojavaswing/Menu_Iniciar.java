@@ -28,6 +28,7 @@ public class Menu_Iniciar extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jb_calculadora = new javax.swing.JButton();
+        jb_calculadora1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -39,10 +40,25 @@ public class Menu_Iniciar extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
+        jb_calculadora.setBackground(new java.awt.Color(255, 255, 255));
+        jb_calculadora.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jb_calculadora.setForeground(new java.awt.Color(0, 0, 0));
         jb_calculadora.setText("Claculadora");
+        jb_calculadora.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jb_calculadora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_calculadoraActionPerformed(evt);
+            }
+        });
+
+        jb_calculadora1.setBackground(new java.awt.Color(255, 255, 255));
+        jb_calculadora1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jb_calculadora1.setForeground(new java.awt.Color(0, 0, 0));
+        jb_calculadora1.setText("Triangulos");
+        jb_calculadora1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jb_calculadora1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_calculadora1ActionPerformed(evt);
             }
         });
 
@@ -52,7 +68,9 @@ public class Menu_Iniciar extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(55, 55, 55)
-                .addComponent(jb_calculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_calculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_calculadora1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(586, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -60,8 +78,13 @@ public class Menu_Iniciar extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(jb_calculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(362, Short.MAX_VALUE))
+                .addGap(90, 90, 90)
+                .addComponent(jb_calculadora1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(177, Short.MAX_VALUE))
         );
+
+        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
+        jMenuBar1.setForeground(new java.awt.Color(51, 51, 51));
 
         jMenu1.setText("Formulários");
 
@@ -108,6 +131,11 @@ public class Menu_Iniciar extends javax.swing.JFrame {
         c.setVisible(true);
     }//GEN-LAST:event_jb_calculadoraActionPerformed
 
+    private void jb_calculadora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_calculadora1ActionPerformed
+        Triangulo t = new Triangulo();
+        t.setVisible(true);
+    }//GEN-LAST:event_jb_calculadora1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -151,5 +179,6 @@ public class Menu_Iniciar extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jb_calculadora;
+    private javax.swing.JButton jb_calculadora1;
     // End of variables declaration//GEN-END:variables
 }
