@@ -4,6 +4,8 @@
  */
 package exemplojavaswing;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 886663
@@ -37,11 +39,13 @@ public class Triangulo extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jtx_resultado = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jtx_resultado = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
         jLabel1.setText("jLabel1");
@@ -96,18 +100,6 @@ public class Triangulo extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Lado 3:");
 
-        jtx_resultado.setEditable(false);
-        jtx_resultado.setBackground(new java.awt.Color(255, 255, 255));
-        jtx_resultado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jtx_resultado.setForeground(new java.awt.Color(0, 51, 51));
-        jtx_resultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jtx_resultado.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(255, 102, 0)));
-        jtx_resultado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtx_resultadoActionPerformed(evt);
-            }
-        });
-
         jButton1.setBackground(new java.awt.Color(255, 102, 0));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Verificar Tipo");
@@ -121,16 +113,42 @@ public class Triangulo extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 102, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 51, 0)));
 
+        jtx_resultado.setEditable(false);
+        jtx_resultado.setBackground(new java.awt.Color(255, 255, 255));
+        jtx_resultado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtx_resultado.setForeground(new java.awt.Color(0, 51, 51));
+        jtx_resultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtx_resultado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jtx_resultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtx_resultadoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(jtx_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 26, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jtx_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
+
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-orange-60.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -138,51 +156,59 @@ public class Triangulo extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel5))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addGap(44, 44, 44)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtx_num2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                    .addComponent(jtx_num1)
-                    .addComponent(jtx_num3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addComponent(jtx_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabel5))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtx_num2)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                            .addComponent(jtx_num3)
+                            .addComponent(jtx_num1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(63, 63, 63)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtx_num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(2, 2, 2)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtx_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jtx_num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(24, 24, 24)))
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtx_num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jtx_num3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jButton1)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(14, 14, 14))))
         );
 
         jMenu1.setText("File");
+
+        jMenu5.setText("Close");
+        jMenu1.add(jMenu5);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Edit");
@@ -194,7 +220,7 @@ public class Triangulo extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,40 +231,43 @@ public class Triangulo extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtx_num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx_num1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtx_num1ActionPerformed
+    private void jtx_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx_resultadoActionPerformed
 
-    private void jtx_num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx_num2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtx_num2ActionPerformed
+    }//GEN-LAST:event_jtx_resultadoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        int n1 = Integer.parseInt(jtx_num1.getText());
+        int n2 = Integer.parseInt(jtx_num2.getText());
+        int n3 = Integer.parseInt(jtx_num3.getText());
+
+        if(n1 == n2 & n1 == n3){
+            String resultado = "Triangulo Equilatero";
+            jtx_resultado.setText(resultado);
+        }else if (n1 == n2 & n1!=n3 || n1 == n3 & n1 != n2){
+            String resultado = "Triangulo Isóceles";
+            jtx_resultado.setText(resultado);
+        }else if (n1 != n2 & n1!= n3){
+            String resultado = "Triangulo Escaleno";
+            jtx_resultado.setText(resultado);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jtx_num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx_num3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtx_num3ActionPerformed
 
-    private void jtx_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx_resultadoActionPerformed
-        
-    }//GEN-LAST:event_jtx_resultadoActionPerformed
+    private void jtx_num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx_num2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtx_num2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-         int n1 = Integer.parseInt(jtx_num1.getText());
-         int n2 = Integer.parseInt(jtx_num2.getText());
-         int n3 = Integer.parseInt(jtx_num3.getText());
-        
-        
-        if(n1 == n2 & n1 == n3){
-            String resultado = "Triangulo Equilatero";
-           jtx_resultado.setText(resultado);   
-        }else if (n1 == n2 & n1!=n3 || n1 == n3 & n1 != n2){
-            String resultado = "Triangulo Isóceles";
-           jtx_resultado.setText(resultado); 
-        }else if (n1 != n2 & n1!= n3){
-            String resultado = "Triangulo Escaleno";
-           jtx_resultado.setText(resultado); 
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jtx_num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx_num1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtx_num1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JOptionPane.showMessageDialog(null, "Laranja tem vitamina C!");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -272,6 +301,7 @@ public class Triangulo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -280,6 +310,7 @@ public class Triangulo extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel1;
