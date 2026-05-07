@@ -268,7 +268,7 @@ public class ComboBox extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_SalvarActionPerformed
 
     private void jb_ExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ExcluirActionPerformed
-         String selecionado = cb_Produtos.getSelectedItem().toString();
+        String selecionado = cb_Produtos.getSelectedItem().toString();
         cb_Produtos.removeItem(selecionado);
         JOptionPane.showMessageDialog(null, "Gatinho excluido!");
     }//GEN-LAST:event_jb_ExcluirActionPerformed
