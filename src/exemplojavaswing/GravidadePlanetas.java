@@ -226,37 +226,37 @@ public class GravidadePlanetas extends javax.swing.JFrame {
         DecimalFormat d2 = new DecimalFormat("0.00");
         switch (selecionado) {
             case "Mercúrio":
-                peso = (9.8/10)*3.6;
+                peso = (peso/10)*3.6;
                 JOptionPane.showMessageDialog(null, "Seu peso em Mercúrio é: "+d2.format(peso));
                 
                 break;
             case "Vênus":
-                 peso = (9.8/10)*8.7;
+                 peso = (peso/10)*8.7;
                 JOptionPane.showMessageDialog(null, "Seu peso em Vênus é: "+d2.format(peso));  
                 break;
             case "Marte":
-                 peso = (9.8/10)*3.7;
+                 peso = (peso/10)*3.7;
                 JOptionPane.showMessageDialog(null, "Seu peso em Marte é: "+d2.format(peso));
                 break;
             case "Júpiter":
-                 peso = (9.8/10)*24.79;
+                 peso = (peso/10)*24.79;
                 JOptionPane.showMessageDialog(null, "Seu peso em Jupiter é: "+d2.format(peso));
                 break;
             case "Saturno":
-                 peso = (9.8/10)*10.44;
+                 peso = (peso/10)*10.44;
                 JOptionPane.showMessageDialog(null, "Seu peso em Saturno é: "+d2.format(peso));
                 break;
             case "Urano":
-                 peso = (9.8/10)*8.69;
+                 peso = (peso/10)*8.69;
                 JOptionPane.showMessageDialog(null, "Seu peso em Urano é: "+d2.format(peso));
                 break;
             case "Neturno":
-                 peso = (9.8/10)*11.15;
+                 peso = (peso/10)*11.15;
                 JOptionPane.showMessageDialog(null, "Seu peso em Neturno é: "+d2.format(peso));
                 break;
             case "Lua":
-                 peso = (9.8/10)*1.6;
-                JOptionPane.showMessageDialog(null, "Seu peso em Lua é: "+d2.format(peso));
+                 peso = (peso/10)*1.6;
+                JOptionPane.showMessageDialog(null, "Seu peso na Lua é: "+d2.format(peso));
                 break;
             default:
                 throw new AssertionError();
