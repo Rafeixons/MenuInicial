@@ -32,7 +32,7 @@ public class SistemaCadastro extends javax.swing.JFrame {
         js_Nivelexperiência = new javax.swing.JSlider();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jb_SalvarCadastro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -224,13 +224,13 @@ public class SistemaCadastro extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon de cadastro.png"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 102, 255));
-        jButton1.setText("Salvar Cadastro");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jb_SalvarCadastro.setBackground(new java.awt.Color(204, 204, 204));
+        jb_SalvarCadastro.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jb_SalvarCadastro.setForeground(new java.awt.Color(51, 102, 255));
+        jb_SalvarCadastro.setText("Salvar Cadastro");
+        jb_SalvarCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jb_SalvarCadastroActionPerformed(evt);
             }
         });
 
@@ -258,7 +258,7 @@ public class SistemaCadastro extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(154, 154, 154)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jb_SalvarCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -280,7 +280,7 @@ public class SistemaCadastro extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(jb_SalvarCadastro)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -298,7 +298,8 @@ public class SistemaCadastro extends javax.swing.JFrame {
 
     }//GEN-LAST:event_txf_NomeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jb_SalvarCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_SalvarCadastroActionPerformed
+
         String mensagem = "";
         String nome = txf_Nome.getText();
         String turno = "";
@@ -327,6 +328,18 @@ public class SistemaCadastro extends javax.swing.JFrame {
             beneficio += "Vale Transporte.\n";
         }
 
+        while (txf_Nome.getText().isEmpty()) {
+            String[] opcoes = {"OK"};
+            int escolha = JOptionPane.showOptionDialog(null, "Digite um nome!", "Erro ao mostrar informações",
+                    JOptionPane.DEFAULT_OPTION,
+                    JOptionPane.ERROR_MESSAGE, null,
+                    opcoes, opcoes[0]);
+
+            if (escolha == 0) {
+                return;
+            }
+        }
+
         mensagem += "Nome: " + nome + ".\n";
         mensagem += "Cargo: " + cb_Cargos.getSelectedItem().toString() + ".\n";
         mensagem += "Turno: " + turno + ".\n\n";
@@ -336,36 +349,10 @@ public class SistemaCadastro extends javax.swing.JFrame {
         mensagem += "Nível de Experiência: " + js_Nivelexperiência.getValue();
 
         JOptionPane.showMessageDialog(null, mensagem);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jb_SalvarCadastroActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SistemaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SistemaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SistemaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SistemaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SistemaCadastro().setVisible(true);
@@ -379,7 +366,6 @@ public class SistemaCadastro extends javax.swing.JFrame {
     private javax.swing.JCheckBox cb_Plano;
     private javax.swing.JCheckBox cb_ValeAlimentacao;
     private javax.swing.JCheckBox cb_ValeTransportes;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -389,6 +375,7 @@ public class SistemaCadastro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JButton jb_SalvarCadastro;
     private javax.swing.JSlider js_Nivelexperiência;
     private javax.swing.JRadioButton rb_Manhã;
     private javax.swing.JRadioButton rb_Noite;
