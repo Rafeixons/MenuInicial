@@ -590,7 +590,8 @@ public class Menu_Iniciar extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel42)))
                 .addGap(18, 18, 18)
-                .addComponent(jb_cadastroFuncionário))
+                .addComponent(jb_cadastroFuncionário)
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel38)
@@ -628,35 +629,36 @@ public class Menu_Iniciar extends javax.swing.JFrame {
                                 .addComponent(jLabel49, javax.swing.GroupLayout.Alignment.TRAILING)))))
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel47)
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel38)
-                        .addGap(18, 18, 18))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(jLabel37)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel40)
                             .addComponent(jLabel51))
-                        .addGap(22, 22, 22)))
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jb_cadastroFuncionário, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addGap(0, 0, Short.MAX_VALUE)
-                            .addComponent(jLabel46))
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(jLabel39)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel50)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel45))
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(jLabel44)
-                            .addGap(12, 12, 12)
-                            .addComponent(jLabel52)))))
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel39)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel50)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addComponent(jLabel45))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel46)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel44)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(jLabel52))))))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel47)
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel38)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jb_cadastroFuncionário, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12))))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel6Layout.createSequentialGroup()
                     .addGap(96, 96, 96)
@@ -883,9 +885,9 @@ public class Menu_Iniciar extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jLabel65)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addComponent(jLabel67)
                         .addGap(44, 44, 44)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -893,8 +895,7 @@ public class Menu_Iniciar extends javax.swing.JFrame {
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(jLabel68))))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addComponent(jLabel63)
                         .addGap(68, 68, 68)
                         .addComponent(jb_Pedra, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -906,10 +907,10 @@ public class Menu_Iniciar extends javax.swing.JFrame {
                     .addContainerGap(96, Short.MAX_VALUE)))
         );
 
-        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel11.setBackground(new java.awt.Color(102, 153, 255));
 
         jb_Pedra1.setBackground(new java.awt.Color(255, 255, 255));
-        jb_Pedra1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pedra.png"))); // NOI18N
+        jb_Pedra1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botão =.png"))); // NOI18N
         jb_Pedra1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_Pedra1ActionPerformed(evt);
@@ -918,26 +919,28 @@ public class Menu_Iniciar extends javax.swing.JFrame {
 
         jLabel69.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel69.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel69.setText(".");
+        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icone de calculadora.png"))); // NOI18N
 
         jLabel70.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel70.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel70.setText(".");
+        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icone de calculadora.png"))); // NOI18N
 
         jLabel71.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel71.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icone de calculadora.png"))); // NOI18N
         jLabel71.setText(".");
 
         jLabel72.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel72.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel72.setText(".");
+        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icone de calculadora.png"))); // NOI18N
 
         jLabel73.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel73.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel73.setText(".");
+        jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icone de calculadora.png"))); // NOI18N
 
         jLabel74.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel74.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icone de calculadora.png"))); // NOI18N
         jLabel74.setText(".");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
@@ -945,60 +948,55 @@ public class Menu_Iniciar extends javax.swing.JFrame {
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(64, 64, 64))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jb_Pedra1)
                 .addContainerGap())
-            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel11Layout.createSequentialGroup()
-                    .addGap(104, 104, 104)
-                    .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, 15, Short.MAX_VALUE)
-                    .addGap(104, 104, 104)))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel70)
+                .addGap(52, 52, 52))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel71)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel73)
-                        .addGap(44, 44, 44)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel72, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(jLabel74))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel70)
-                        .addGap(68, 68, 68)
-                        .addComponent(jb_Pedra1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel71))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel70)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel69)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel73)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jb_Pedra1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel72)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel74)))
                 .addContainerGap())
-            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel11Layout.createSequentialGroup()
-                    .addGap(96, 96, 96)
-                    .addComponent(jLabel69)
-                    .addContainerGap(96, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1132,7 +1130,8 @@ public class Menu_Iniciar extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_PedraActionPerformed
 
     private void jb_Pedra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_Pedra1ActionPerformed
-        // TODO add your handling code here:
+        CalculadoraFuncional cf = new CalculadoraFuncional();
+        cf.setVisible(true);
     }//GEN-LAST:event_jb_Pedra1ActionPerformed
 
     /**
