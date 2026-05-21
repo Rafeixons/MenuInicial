@@ -112,6 +112,12 @@ public class BuscaPasta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void dimensionar(String escolha){
+        ImageIcon icon = new ImageIcon(escolha);
+        icon.setImage(icon.getImage().getScaledInstance(jl_imagem.getWidth(), jl_imagem.getHeight(), 1));
+        jl_imagem.setIcon(icon);
+}
+    
     private void jb_pastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_pastaActionPerformed
         JFileChooser file = new JFileChooser();
 
@@ -128,9 +134,7 @@ public class BuscaPasta extends javax.swing.JFrame {
             String escolhida = file.getSelectedFile().getAbsolutePath();
             txf_endereco.setText(escolhida);
 
-            ImageIcon icon = new ImageIcon(escolhida);
-            Image imagem = icon.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT);
-            jl_imagem.setIcon(new ImageIcon(imagem));
+            dimensionar(escolhida);
 
         } else {
             JOptionPane.showMessageDialog(null, "ERRO");
