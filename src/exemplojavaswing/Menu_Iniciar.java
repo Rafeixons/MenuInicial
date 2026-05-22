@@ -115,7 +115,15 @@ public class Menu_Iniciar extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        calculadoraSimples = new javax.swing.JMenuItem();
+        comboBox = new javax.swing.JMenuItem();
+        pedraPapelTesoura = new javax.swing.JMenuItem();
+        calculadorafuncional = new javax.swing.JMenuItem();
+        triangulos = new javax.swing.JMenuItem();
+        gravidadePlanetas = new javax.swing.JMenuItem();
+        menuJogo = new javax.swing.JMenuItem();
+        sistemaCadastro = new javax.swing.JMenuItem();
+        buscarPasta = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -1048,7 +1056,7 @@ public class Menu_Iniciar extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 208, Short.MAX_VALUE)
                                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap())
         );
@@ -1096,13 +1104,77 @@ public class Menu_Iniciar extends javax.swing.JFrame {
 
         jMenu1.setText("Formulários");
 
-        jMenuItem1.setText("Calcuradora");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        calculadoraSimples.setText("Calcuradora");
+        calculadoraSimples.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                calculadoraSimplesActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(calculadoraSimples);
+
+        comboBox.setText("Combo Box");
+        comboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxActionPerformed(evt);
+            }
+        });
+        jMenu1.add(comboBox);
+
+        pedraPapelTesoura.setText("Pedra Papel Tesoura");
+        pedraPapelTesoura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pedraPapelTesouraActionPerformed(evt);
+            }
+        });
+        jMenu1.add(pedraPapelTesoura);
+
+        calculadorafuncional.setText("Calculadora Funcional");
+        calculadorafuncional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculadorafuncionalActionPerformed(evt);
+            }
+        });
+        jMenu1.add(calculadorafuncional);
+
+        triangulos.setText("Triangulos");
+        triangulos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                triangulosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(triangulos);
+
+        gravidadePlanetas.setText("Gravidade Planetas");
+        gravidadePlanetas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gravidadePlanetasActionPerformed(evt);
+            }
+        });
+        jMenu1.add(gravidadePlanetas);
+
+        menuJogo.setText("Menu Jogo");
+        menuJogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuJogoActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuJogo);
+
+        sistemaCadastro.setText("Sistema de Cadastro");
+        sistemaCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sistemaCadastroActionPerformed(evt);
+            }
+        });
+        jMenu1.add(sistemaCadastro);
+
+        buscarPasta.setText("Busca Pasta");
+        buscarPasta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarPastaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(buscarPasta);
 
         jMenuBar1.add(jMenu1);
 
@@ -1118,10 +1190,10 @@ public class Menu_Iniciar extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void calculadoraSimplesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculadoraSimplesActionPerformed
         CalculadoraSimples c = new CalculadoraSimples();
         c.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_calculadoraSimplesActionPerformed
 
     private void jb_TriangulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_TriangulosActionPerformed
         Triangulo t = new Triangulo();
@@ -1169,6 +1241,46 @@ public class Menu_Iniciar extends javax.swing.JFrame {
         bc.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void comboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxActionPerformed
+        ComboBox c = new ComboBox();
+        c.setVisible(true);
+    }//GEN-LAST:event_comboBoxActionPerformed
+
+    private void pedraPapelTesouraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedraPapelTesouraActionPerformed
+        PedraPapelTesoura ppt = new PedraPapelTesoura();
+        ppt.setVisible(true);
+    }//GEN-LAST:event_pedraPapelTesouraActionPerformed
+
+    private void calculadorafuncionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculadorafuncionalActionPerformed
+        CalculadoraFuncional cf = new CalculadoraFuncional();
+        cf.setVisible(true);
+    }//GEN-LAST:event_calculadorafuncionalActionPerformed
+
+    private void triangulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_triangulosActionPerformed
+        Triangulo t = new Triangulo();
+        t.setVisible(true);
+    }//GEN-LAST:event_triangulosActionPerformed
+
+    private void gravidadePlanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gravidadePlanetasActionPerformed
+        GravidadePlanetas g = new GravidadePlanetas();
+        g.setVisible(true);
+    }//GEN-LAST:event_gravidadePlanetasActionPerformed
+
+    private void menuJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuJogoActionPerformed
+        MenuJogo mj = new MenuJogo();
+        mj.setVisible(true);
+    }//GEN-LAST:event_menuJogoActionPerformed
+
+    private void sistemaCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sistemaCadastroActionPerformed
+        SistemaCadastro sc = new SistemaCadastro();
+        sc.setVisible(true);
+    }//GEN-LAST:event_sistemaCadastroActionPerformed
+
+    private void buscarPastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarPastaActionPerformed
+        BuscaPasta bc = new BuscaPasta();
+        bc.setVisible(true);
+    }//GEN-LAST:event_buscarPastaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1205,6 +1317,11 @@ public class Menu_Iniciar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem buscarPasta;
+    private javax.swing.JMenuItem calculadoraSimples;
+    private javax.swing.JMenuItem calculadorafuncional;
+    private javax.swing.JMenuItem comboBox;
+    private javax.swing.JMenuItem gravidadePlanetas;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1275,7 +1392,6 @@ public class Menu_Iniciar extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1297,5 +1413,9 @@ public class Menu_Iniciar extends javax.swing.JFrame {
     private javax.swing.JButton jb_menuJogo;
     private javax.swing.JButton jb_planetas;
     private javax.swing.JPanel jp_combobox;
+    private javax.swing.JMenuItem menuJogo;
+    private javax.swing.JMenuItem pedraPapelTesoura;
+    private javax.swing.JMenuItem sistemaCadastro;
+    private javax.swing.JMenuItem triangulos;
     // End of variables declaration//GEN-END:variables
 }

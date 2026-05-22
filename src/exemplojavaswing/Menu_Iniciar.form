@@ -17,12 +17,76 @@
             <Property name="text" type="java.lang.String" value="Formul&#xe1;rios"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="calculadoraSimples">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Calcuradora"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculadoraSimplesActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="comboBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Combo Box"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="pedraPapelTesoura">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pedra Papel Tesoura"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pedraPapelTesouraActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="calculadorafuncional">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calculadora Funcional"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculadorafuncionalActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="triangulos">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Triangulos"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="triangulosActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="gravidadePlanetas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gravidade Planetas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gravidadePlanetasActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuJogo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Menu Jogo"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuJogoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="sistemaCadastro">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sistema de Cadastro"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sistemaCadastroActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="buscarPasta">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Busca Pasta"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buscarPastaActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -132,7 +196,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jPanel6" alignment="1" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel6" alignment="1" pref="208" max="32767" attributes="0"/>
                                       <Component id="jPanel7" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
